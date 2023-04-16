@@ -1,0 +1,17 @@
+---
+- name: Update Cache #equivalente a apt update
+  apt:
+    update_cache: yes
+
+- name: Instalando pacotes essenciais #Instalando pacotes usuando apt
+  apt:
+    name:
+      - vim
+      - curl
+      - telnet
+      - unzip
+      - wget
+      - net-tools
+      - htop
+      - nmap
+    state: present
